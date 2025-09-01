@@ -1,5 +1,6 @@
 
 console.log("a is called for first time",a())
+
 var a = () =>{
     console.log("a is assingned using expression")
     return 123;
