@@ -15,16 +15,17 @@ Promise.resolve("foo")
   .then((string) => {
     setTimeout(() => {
       string += "baz";
-      console.log(string); // foobarbaz
+      console.log(string ); // foobarbaz
     }, 1);
     return string;
   })
+  
   // 3. print helpful messages about how the code in this section will be run
   // before the string is actually processed by the mocked asynchronous code in the
   // previous then block.
   .then((string) => {
     console.log(
-      "Last Then: oops... didn't bother to instantiate and return a promise in the prior then so the sequence may be a bit surprising",
+      "Last Then: oops... didn't bother to instantiate and return a promise in the prior then so the sequence may be a bit surprising ",
     );
 
     // Note that `string` will not have the 'baz' bit of it at this point. This
